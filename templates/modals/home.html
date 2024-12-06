@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block extra_meta %}
+<!-- Meta Tags for SEO and Improved Visibility -->
+<meta name="description" content="Welcome to neuralnetwork.wiki - Explore a variety of informative articles and engaging content across diverse topics.">
+<meta name="keywords" content="neuralnetwork.wiki, informative articles, engaging content, topics, knowledge, wiki">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="flex flex-col items-center justify-center text-center py-32">
+    <div class="max-w-xl mx-auto">
+        <h1 class="text-3xl text-gray-800 font-pt-serif">Welcome to Wiki</h1>
+        <p class="text-md text-gray-600 mb-4 max-w-sm">
+            Discover interesting content and informative articles on a wide range of topics.
+        </p>
+        <a href="/search-post"
+           class="inline-block px-6 py-2 text-white bg-[#262626] hover:bg-black rounded-lg text-sm transition duration-300">
+            Search Post ↓
+        </a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,9 @@
+Flask
+apscheduler
+PyYAML
+markdown
+sqlite3
+requests
+pdfplumber
+anthropic
+arxiv
