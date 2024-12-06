@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block extra_meta %}
+<!-- Dynamic Meta Tags for SEO -->
+<meta name="description" content="{{ meta_tags.get('description', '') }}">
+<meta name="keywords" content="{{ meta_tags.get('keywords', '') }}">
+<meta name="date" content="{{ meta_tags.get('date', '') }}">
+{% endblock %}
+
+{% block title %}{{ meta_tags.get('title', 'Default Title') }}{% endblock %}
+
+{% block extra_links %}
+<!-- External and Internal Stylesheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/post.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/code.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Main Content Area -->
+<div class="post-style text-lg text-gray-700 markdown-body">
+    <!-- Render Markdown Content -->
+    {{ markdown_content | safe }}
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<!-- JavaScript for Math Rendering and Dynamic Content -->
+<script src="{{ url_for('static', filename='javascript/mathjax.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
+{% endblock %}
